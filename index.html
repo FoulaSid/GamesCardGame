@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GAMES</title>
-    <link rel="stylesheet" href="../CSS/style.css">
-    <link rel="stylesheet" href="../CSS/set.css">
-    <link rel="stylesheet" href="../CSS/user.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/set.css">
+    <link rel="stylesheet" href="../css/user.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
 
 </head>
@@ -19,12 +19,8 @@
             <div class="form-group">
                 <button onclick="startGame()">Start</button>
             </div>
-
             <div class="form-group">
                 <button onclick="document.location='rules.html'">Rules</button>
-            </div>
-            <div class="form-group">
-                <button style="display: none;"  id="lgn" onclick="document.location='login.html'">Save Progress</button>
             </div>
         </div>
     </div>
@@ -40,7 +36,6 @@
                 </div>
                 <span> Username <i class="fa-solid fa-angle-down"></i> </span>
             </div>
-
             <ul class="profile-dropdown-list">
                 <li class="profile-dropdown-list-item">
                     <a href="./main.html">
@@ -54,8 +49,6 @@
                         Score Board
                     </a>
                 </li>
-            
-
                 <li style="height: 60px;"  class="profile-dropdown-list-item">
                     <audio id="audio" loop>
                         <source src="1.mp3" type="audio/mp3">
@@ -96,19 +89,12 @@
     <h2>Welcome to Games</h2>
     <p id="login-message">Please sign in to continue</p>
     <button onclick="registerForm()">Sign Up</button>
-    <!--
-    <img src="../images/iee.png" alt="iee ihu" style="height:25px; margin-left: 5px; width:25px; vertical-align:middle; margin-bottom: 10px;"> 
-    -->
-    
     <button onclick="loginGuest()">Continue as a guest</button>
 </div>   
 
 
-<script src="../js/games.js"></script>
 <script src="../js/set.js"></script>
 <script src="../js/user.js"></script>
-<script src="../js/username.js"></script>
-
 
 
 </body>

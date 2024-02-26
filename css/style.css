@@ -1,0 +1,338 @@
+
+body {
+    font-family: 'Times New Roman', sans-serif; 
+
+    background-image: url('../images/background.png');
+    background-size: cover;
+    background-position: center; 
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    
+    height: 100vh;
+}
+
+
+
+
+.login-container {
+    background-color: #ebebeb;
+    
+    border-radius: 8px;
+    
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.886);
+    
+    padding: 20px;
+    
+    width: 300px;
+
+    max-width: 90%; 
+
+
+}
+
+.login-container h2 {
+
+    text-align: center;
+
+    color: #333;
+
+
+    font-weight: bold; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+
+    font-size: 1.5rem; 
+
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+#input-error
+{
+    color: #c7c6c6;
+    font-size: 14px;
+    padding: 3px;
+}
+
+.form-group label {
+    font-weight: bold;
+    
+    margin-bottom: 5px;
+    
+
+    color: #362020;
+}
+
+
+
+.form-group input {
+    width: calc(100% - 16px); 
+
+    padding: 8px;
+
+
+    border: 1px solid #ccc;
+
+    border-radius: 4px;
+}
+
+
+.form-group button {
+    background-color: #15140c;
+    
+    color: #c7c6c6;
+    
+    padding: 10px;
+    width: 100%; /* size of the btn inside */
+
+    font-size: 1rem; 
+    
+    border: none;
+    
+    border-radius: 4px;
+
+    font-family: 'Times New Roman', sans-serif; 
+
+    letter-spacing: 2px;
+
+
+    cursor: pointer;
+}
+
+.form-group button:hover {
+    background-color: rgb(80, 0, 0);
+    transform: scale(1.05); /* Increase the scale on hover */
+}
+
+
+
+
+.popup{
+    width: 300px;
+    max-width: 350px;
+    border-radius: 6px ;
+    background: #000000;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%)scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #ebebeb;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+    box-shadow: 0 0 10px #ebebeb;
+
+  }
+ /* for the script */
+  .open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%,-50%)scale(1);
+  }
+
+
+  .popup img{
+    margin-top: 10px;
+    border-radius: 50%;
+  }
+
+  .popup h2{
+    font-size: 38px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 500;
+    margin: 30px 0 10px;
+  }
+
+  .popup p{
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+  }
+
+  .popup button{
+    width: 100%;
+    margin-top: 40px;
+    padding: 10px;
+    background-color: #ebebeb;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    font-family: 'Times New Roman', sans-serif; 
+
+  }
+  .popup button:hover{
+    background-color: rgb(80, 0, 0);
+    transform: scale(1.05); /* Increase the scale on hover */
+    color: #ebebeb;
+  }
+
+  /*ROOM CSS  */
+  
+.user-icon {
+    position: absolute;
+    top: 20px; 
+    right: 50px; 
+    z-index: 10; 
+  }
+  
+  .user-icon img {
+    transition: transform 0.3s ease; 
+    width: 130px; 
+    height: auto;
+    cursor: pointer;
+  }  
+
+
+/* jo */
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: goldenrod;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+/* the lines under the about and contact. */
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: goldenrod;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition:transform .5s;
+
+}
+
+.navigation a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+
+.navigation .btnLogin-popup {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid goldenrod;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color:goldenrod;
+    font-weight: 500;
+    margin-left: 40px;
+
+}
+
+.navigation .btnLogin-popup:hover {
+    background: goldenrod;
+    color: black;
+}
+
+.login-register {
+    font-size: 17px;
+    text-align: center;
+
+}
+
+.login-register p a {
+    color: rgb(77, 8, 8);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-register p a:hover {
+    text-decoration: underline;
+}
+
+
+/*responsive */
+
+@media (max-width: 480px) {
+    .login-container {
+        width: 100%;
+    }
+    .login-container h2{
+        font-size: 4vw; 
+    }
+    .form-group input, .form-group button {
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .login-container, .popup {
+        width: 90%;
+    }
+    .login-container h2, .popup h2 {
+        font-size: 3.5vw;
+    }
+    .form-group input, .form-group button {
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .login-container, .popup {
+        max-width: 350px;
+    }
+    .login-container h2, .popup h2 {
+        font-size: 3vw;
+    }
+    header {
+        padding: 20px 3%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .login-container, .popup {
+        max-width: 300px;
+    }
+    .login-container h2, .popup h2 {
+        font-size: 2.5vw;
+    }
+}
+
+@media (min-width: 1200px) {
+    .login-container, .popup {
+        max-width: 400px;
+    }
+    .login-container h2, .popup h2 {
+        font-size: 2vw;
+    }
+}
